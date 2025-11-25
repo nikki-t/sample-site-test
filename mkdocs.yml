@@ -1,0 +1,61 @@
+site_name: Siddarth Achar
+site_description: Postdoctoral Scholar at University of Chicago
+site_author: Siddarth Achar
+site_url: https://siddarthachar.github.io
+
+repo_name: siddarthachar/siddarthachar.github.io
+repo_url: https://github.com/siddarthachar/siddarthachar.github.io
+# Update these with your actual repository name and URL
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: green
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: green
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+  custom_dir: docs/overrides
+  extra_css:
+    - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Papers: publications.md
+  - Experience: experience.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+
